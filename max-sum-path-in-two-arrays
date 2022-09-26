@@ -23,7 +23,12 @@ public class Maximum_Sum_Path_in_Two_Arrays {
 		}
 
 	}
-
+	//Take two initial pointers from starting of both the arrays.
+	//Take two pointer to mark the starting point of each subsequent subpath.
+	//Compare the elements at the pointers i,j and increment the pointer at which element is smaller.
+	//If elements at the given pointer are equal then take sum of both the subpath and select the maximum of both and add to result and set the pointers for next iteration.
+	//Take sum of the remaining array after pointer reaching the end at either of the array and add it to answer.
+	
 	public static int pathSum(int[] arr, int[] brr) {
 		int i = 0;// arr
 		int j = 0;// brr
