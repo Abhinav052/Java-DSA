@@ -1,17 +1,15 @@
 class Solution {
-    public int[] twoSum(int[] nums, int target) {
-        Map<Integer,Integer> mp = new HashMap<>();
-        
-        for(int i =0 ; i<nums.length;i++){
-            
-            if(!mp.containsKey(target-nums[i])){
-                mp.put(nums[i],i);
+    public int maxProfit(int[] prices) {
+        int minPrice = prices[0];
+        int profit=0;
+        for(int i = 1 ;i < prices.length ; i++){
+            if(prices[i]-minPrice>profit){
+                profit=prices[i]-minPrice;
             }
-            else{
-                 return new int[] {i,mp.get(target-nums[i])};
+            else if(prices[i]<minPrice){
+                minPrice=prices[i];
             }
-           
         }
-        return new int[] {-1,-1};
+        return profit;
     }
 }
