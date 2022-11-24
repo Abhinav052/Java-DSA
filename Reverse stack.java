@@ -35,3 +35,5 @@ public class MyClass {
         st.push(k);
     }
 }
+
+// TIME COMPLEXITY - O(n^2)
